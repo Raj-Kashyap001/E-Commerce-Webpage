@@ -1,0 +1,101 @@
+i.icon {
+  width: 15px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+i.sm {
+  width: 15px !important;
+}
+i.m {
+  width: 20px !important;
+}
+i.lg {
+  width: 35px !important;
+}
+i.xl {
+  width: 40px !important;
+}
+
+i.icon.facebook {
+  background-image: url("/src/icons/facebook.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+
+i.icon.twitter {
+  background-image: url("/src/icons/twitter.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+i.icon.instagram {
+  background-image: url("/src/icons/instagram.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+i.icon.youtube {
+  background-image: url("/src/icons/youtube.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+i.icon.linkedin {
+  background-image: url("/src/icons/linkedin.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+
+i.icon.right-arrow {
+  background-image: url("/src/icons/right-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+
+i.icon.bag {
+  background-image: url("/src/icons/bag.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+
+i.icon.magnifying-glass {
+  background-image: url("/src/icons/magnifying-glass.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+i.icon.magnifying-glass-blue {
+  background-image: url("/src/icons/magnifying-glass-blue.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+
+i.icon.star-filled {
+  background-image: url("/src/icons/star-filled.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}
+i.icon.star-hollow {
+  background-image: url("/src/icons/star-hollow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+}

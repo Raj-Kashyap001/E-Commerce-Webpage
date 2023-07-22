@@ -1,0 +1,477 @@
+@font-face {
+  font-family: Montserrat;
+  src: url("/src/font/Montserrat/Montserrat.ttf"), format(ttf);
+}
+
+:root {
+  --clr-primary-700: hsl(227, 100%, 50%);
+  --clr-primary-500: hsl(194, 100%, 40%);
+  --clr-primary-100: hsl(227, 100%, 92%);
+
+  --clr-secondary-violet: hsl(266, 85%, 58%);
+  --clr-secondary-orange: hsl(25, 100%, 59%);
+
+  --clr-neutral-900: hsl(0, 0%, 10%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --font: Montserrat, sans-serif;
+}
+
+/* Resets */
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+
+li,
+a {
+  text-decoration: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Base Styles */
+
+body {
+  font-family: var(--font);
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+section:not(#hero, #offers) {
+  padding-inline: 1rem;
+  max-width: 53.125rem;
+  margin-inline: auto;
+  overflow-x: hidden;
+}
+
+/* Utility Classes */
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.even-colums > div {
+  flex: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  padding: 0.5em;
+  color: var(--clr-neutral-900);
+  background: var(--clr-neutral-100);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.btn:is(:hover, :focus) {
+  background: var(--clr-primary-700);
+  color: var(--clr-neutral-100);
+  outline: 1px solid var(--clr-neutral-100);
+}
+
+.icon {
+  transition: scale 0.1s ease-in;
+}
+
+i.icon:is(:hover, :focus):not(.magnifying-glass-blue) {
+  scale: 1.25;
+}
+
+.btn.outlined {
+  border: 1.5px solid var(--clr-primary-700);
+  font-size: 0.7rem;
+}
+
+.btn.submit {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-700);
+  border: 1px solid var(--clr-primary-700);
+}
+
+.btn.submit:hover {
+  color: var(--clr-neutral-900);
+  background: var(--clr-neutral-100);
+}
+
+/* Header */
+.header {
+  padding-inline: 0.5em;
+  align-items: center;
+}
+
+.header .navlinks {
+  padding: 0.5rem 0.3rem;
+  gap: 1em;
+  align-items: center;
+}
+.header .section-links {
+  padding: 0;
+}
+.header .section-links ul {
+  gap: 1em;
+}
+
+.header .section-links ul li a {
+  color: var(--clr-neutral-900);
+  font-size: clamp(10px, 1.1vw, 1rem);
+}
+
+.search-bar {
+  border: 1px solid var(--clr-neutral-900);
+  border-radius: 0.5em;
+  margin: 1.5rem 0.5rem;
+  padding-inline: 0.3em;
+  align-items: center;
+  gap: 4px;
+}
+
+.search-bar input {
+  width: fit-content;
+  flex-grow: 1;
+  border: none;
+  padding: 0.6rem 0.7rem;
+  border-left: 1px solid var(--clr-neutral-900);
+  outline: none;
+}
+
+/* Hero Section */
+#hero {
+  background: var(--clr-primary-700);
+  color: var(--clr-neutral-100);
+  padding: 2rem 1rem;
+  border-radius: 0 0 4.5rem 0;
+  background-image: url(/src/img/hero.png);
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.hero-text > * {
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  justify-self: flex-start;
+  width: 70%;
+}
+
+.hero-text h1 {
+  font-size: clamp(1.6rem, 2.7vw, 2.5rem);
+  line-height: 1;
+  font-weight: 600;
+}
+
+.hero-text p {
+  font-size: clamp(12px, 1.3vw, 2rem);
+  color: hsl(0, 0%, 90%);
+}
+a {
+  position: relative;
+}
+
+a:not(.btn, .icon_link)::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  bottom: -2px;
+  left: 0;
+  background: var(--clr-primary-700);
+  transition: width 0.3s ease-in;
+  transform-origin: left;
+}
+
+a:hover::after {
+  width: 100%;
+}
+/* Featured */
+section {
+  padding-block: 2rem;
+}
+
+.section-title-bar {
+  padding-block: 1.5rem;
+}
+
+section .section-expand-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+section .section-title,
+section .section-expand-link {
+  font-size: 0.88rem;
+  color: var(--clr-neutral-900);
+  font-weight: 500;
+}
+
+section .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 1.5rem;
+}
+
+.shop-item {
+  height: 280px;
+  max-width: 180px;
+  transition: scale 0.3s ease-in-out;
+  box-shadow: hsla(0, 0%, 39%, 0.2) 0px 2px 8px 0px;
+}
+
+.shop-item .item-name {
+  font-size: 0.9rem;
+}
+
+.shop-item > * {
+  padding: 0.3em;
+}
+.item-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clr-primary-100);
+  width: 100%;
+  height: 120px;
+}
+
+.item-img img {
+  object-fit: cover;
+  object-position: center;
+  width: 100px;
+  margin-inline: auto;
+}
+
+/* Offers */
+
+.cabinet-offer-banner {
+  background: var(--clr-secondary-violet);
+  color: var(--clr-neutral-100);
+  padding: 0.5rem 1rem;
+}
+.combo-offer-banner {
+  background: var(--clr-secondary-orange);
+  color: var(--clr-neutral-100);
+  padding: 0.5rem 1rem;
+}
+
+.offer-discription {
+  height: 100%;
+  text-align: center;
+  margin-block: auto;
+}
+
+.offer-discription > * {
+  margin-bottom: 1em;
+}
+
+.offer-discription .btn:hover {
+  background: inherit;
+}
+
+.foundation-day-discount {
+  font-size: 1rem;
+  background: var(--clr-primary-500);
+  padding: 1.5rem 1rem;
+  color: var(--clr-neutral-100);
+  gap: 1rem;
+}
+
+.countdown-container {
+  font-size: 12px;
+  gap: 8px;
+  text-align: center;
+  border: 1px solid hsl(0, 0%, 90%);
+  background-color: hsl(0, 0%, 90%);
+  flex-grow: 0;
+  width: fit-content;
+  color: var(--clr-neutral-900);
+  padding: 5px;
+}
+
+.b-r {
+  border-right: 1px solid black;
+}
+
+.countdown-container .format {
+  font-size: 10px;
+  font-weight: 500;
+}
+.countdown-container .digit {
+  font-weight: 700;
+  padding: 0 6px;
+}
+
+/* Footer Section */
+
+footer {
+  padding: 2rem 1rem;
+  background-color: var(--clr-primary-100);
+}
+
+footer > div {
+  margin-bottom: 1.5rem;
+}
+
+.wrapper h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.wrapper > * {
+  margin-bottom: 1em;
+}
+
+.wrapper ul {
+  padding: 0;
+}
+
+.wrapper a {
+  color: var(--clr-neutral-700);
+}
+
+#site-info p {
+  font-size: 12px;
+}
+
+.wrapper input {
+  font-size: 12px;
+  padding: 0.7em;
+  outline: none;
+}
+
+.wrapper i + i {
+  margin-right: 8px;
+}
+
+#copyright {
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-inline: 3rem;
+}
+
+/* Responsive Design */
+@media (min-width: 646px) {
+  .mobile-item {
+    display: none;
+  }
+
+  .hidden {
+    display: block;
+  }
+  #hero {
+    padding: 6rem 2rem;
+    background-size: 250px;
+  }
+
+  section .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .shop-item {
+    box-shadow: none;
+  }
+
+  .shop-item:hover {
+    box-shadow: hsla(0, 0%, 39%, 0.2) 0px 2px 8px 0px;
+    scale: 1.1;
+  }
+
+  .cabinet-offer-banner,
+  .combo-offer-banner {
+    border-radius: 5.5rem 0 5.5rem 0;
+    padding: 1rem;
+  }
+
+  .general-offers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 4rem;
+    padding-bottom: 4rem;
+    padding-top: 0;
+    gap: 2rem;
+  }
+
+  .general-offers h4 {
+    font-size: 14px;
+  }
+
+  .foundation-day-discount .offer-discription {
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .main-footer {
+    gap: 1rem;
+    padding-inline: 1rem;
+  }
+  .social-links {
+    display: flex;
+    flex-shrink: 1;
+    gap: 0.5em;
+  }
+
+  #subscribe {
+    order: 3;
+  }
+}
+
+@media (min-width: 767px) {
+  .main-footer {
+    display: flex;
+  }
+}
