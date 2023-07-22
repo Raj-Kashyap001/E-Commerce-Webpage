@@ -1,4 +1,4 @@
 # E-Commerce-Webpage
-##Frontend Project
+## Frontend Project
 
-###PC Storm is a fictional E Commerce Website that offers gamming pc
+### PC Storm is a fictional E Commerce Website that offers gamming pc
